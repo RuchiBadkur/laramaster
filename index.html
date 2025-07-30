@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaraMaster</title>
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#38bdf8', // cyan
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      @keyframes fade-in-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.9s ease-out both;
+      }
+    </style>
+  </head>
+  <body
+    class="relative min-h-screen text-white bg-cover bg-center bg-no-repeat"
+    style="background-image: url('./assets/dark-texture.png')"
+  >
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/10 backdrop-blur-sm z-0"></div>
+
+    <!-- Content Wrapper -->
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <!-- Top Navbar -->
+      <nav
+        class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+        >
+          <!-- Logo -->
+          <a
+            href="#"
+            class="flex items-center space-x-2 hover:scale-105 transition-transform"
+          >
+            <img
+              src="./assets/laramaster-dark-transparent.png"
+              alt="LaraMaster Logo"
+              class="h-[120px] sm:h-[130px] object-contain"
+            />
+          </a>
+
+          <!-- Desktop Navigation -->
+          <ul class="hidden md:flex space-x-12 text-lg font-medium">
+            <li>
+              <a href="#" class="text-primary border-b-2 border-primary pb-1"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-primary transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-primary transition">About</a>
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-primary transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        class="relative w-full min-h-screen flex items-center justify-center px-4 md:px-10 lg:px-20 text-white z-20"
+      >
+        <!-- Optional overlay for more contrast -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm z-0"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+          <!-- Subheadline -->
+          <p
+            class="text-lg md:text-xl font-medium text-gray-300 mb-4 animate-fade-in-up"
+          >
+            Crafted with Laravel, Styled with Precision
+          </p>
+
+          <!-- Main Headline -->
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6 animate-fade-in-up"
+          >
+            <span class="text-[#a5b4fc]">Scalable Web Solutions</span><br />
+            <span class="text-white">That Drive Real Results</span>
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="text-base md:text-lg text-gray-400 mb-10 leading-relaxed animate-fade-in-up"
+          >
+            We specialize in building robust Laravel applications that are fast,
+            secure,<br />
+            and tailored to your business needs. From idea to execution —<br />
+            we turn complex challenges into elegant digital solutions.
+          </p>
+
+          <!-- CTA Button -->
+          <div class="flex justify-center">
+            <a
+              href="#contact"
+              class="group relative inline-flex items-center justify-center px-8 py-3 rounded-full bg-gradient-to-r from-[#38bdf8] to-[#7c3aed] text-white text-sm md:text-base font-semibold shadow-lg hover:from-[#60a5fa] hover:to-[#8b5cf6] transition-all duration-300"
+            >
+              Get a Quote
+              <span
+                class="ml-2 transform group-hover:translate-x-1 transition-transform duration-200"
+                >→</span
+              >
+            </a>
+          </div>
+
+          <!-- Tech Icons (Optional) -->
+          <div class="mt-10 flex justify-center gap-8 opacity-80">
+            <img
+              src="./assets/laravel-icon.svg"
+              alt="Laravel"
+              class="h-8 w-auto"
+            />
+            <img
+              src="./assets/tailwind-icon.svg"
+              alt="TailwindCSS"
+              class="h-8 w-auto"
+            />
+            <img src="./assets/vue-icon.svg" alt="Vue.js" class="h-8 w-auto" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Mobile Nav -->
+      <nav
+        class="fixed bottom-0 left-0 w-full bg-[#0f1117]/90 backdrop-blur-md border-t border-white/10 md:hidden z-50"
+      >
+        <div class="flex justify-around items-center h-14 text-xl text-white">
+          <a href="#" class="flex flex-col items-center gap-1 text-primary">
+            <i class="ri-home-4-line"></i>
+          </a>
+          <a
+            href="#services"
+            class="flex flex-col items-center gap-1 hover:text-primary"
+          >
+            <i class="ri-service-line"></i>
+          </a>
+          <a
+            href="#about"
+            class="flex flex-col items-center gap-1 hover:text-primary"
+          >
+            <i class="ri-user-line"></i>
+          </a>
+          <a
+            href="#contact"
+            class="flex flex-col items-center gap-1 hover:text-primary"
+          >
+            <i class="ri-contacts-line"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
