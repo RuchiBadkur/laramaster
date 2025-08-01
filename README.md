@@ -44,6 +44,7 @@ cd laramaster
 # 3. Open index.html in your browser
 
 Or simply open `index.html` in your browser after downloading the project.
+```
 
 ---
 
